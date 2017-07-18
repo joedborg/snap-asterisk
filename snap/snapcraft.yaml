@@ -1,0 +1,42 @@
+name: asterisk
+version: '14.6.0'
+summary: Asterisk Communications Framework
+description: |
+  Asterisk is an open source toolkit for building communications applications.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  asterisk:
+    plugin: autotools
+    source: http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+    build-packages:
+      - autoconf
+      - binutils-dev
+      - build-essential
+      - ca-certificates
+      - curl
+      - libcurl4-openssl-dev
+      - libedit-dev
+      - libgsm1-dev
+      - libjansson-dev
+      - libogg-dev
+      - libpopt-dev
+      - libresample1-dev
+      - libspandsp-dev
+      - libspeex-dev
+      - libspeexdsp-dev
+      - libsqlite3-dev
+      - libsrtp0-dev
+      - libssl-dev
+      - libvorbis-dev
+      - libxml2-dev
+      - libxslt1-dev
+      - portaudio19-dev
+      - python-pip
+      - unixodbc-dev
+      - uuid
+      - uuid-dev
+      - xmlstarlet
+
